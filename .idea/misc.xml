@@ -3,4 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.13 (xeris-converter)" />
   </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.13 (xeris-converter)" project-jdk-type="Python SDK" />
 </project>

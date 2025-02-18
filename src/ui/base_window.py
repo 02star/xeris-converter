@@ -1,23 +1,18 @@
-from PyQt6.QtGui import QColor, QIcon
-from PyQt6.QtWidgets import QWidget, QFileDialog
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+# @FileName:    base_window.py
+# @Author:      周立兵
+# @CreationTime:2025/2/18 20:53
+# @Description: the script is used to do something.
+from PyQt6.QtGui import QIcon
+from PyQt6.QtWidgets import QMainWindow
 
 
-# base_window.py
-
-class BaseWindow(QWidget):
+class BaseWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.init_base_ui()
+        self.init_ui()
 
-    def init_base_ui(self):
-        self.setWindowIcon(QIcon('../../assets/icon.png'))
-
+    def init_ui(self):
         self.setWindowTitle('Xeris')
-
-        palette = self.palette()
-        palette.setColor(palette.ColorRole.Window, QColor("#ECF0F1"))
-        self.setPalette(palette)
-
-    def select_file(self) -> list[str]:
-        files, _ = QFileDialog.getOpenFileNames(self)
-        return files
+        self.setWindowIcon(QIcon('../../icon.png'))
